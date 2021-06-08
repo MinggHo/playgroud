@@ -1,0 +1,138 @@
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-content: center;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.box__block {
+  display: flex;
+  gap: 1rem;
+  place-content: center;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background: palevioletred;
+}
+
+.info__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+.info__image {
+  width: 100%;
+  display: block;
+}
+
+
+.drag-element {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.drag-this {
+  width: 150px;
+  height: 150px;
+  background-color: palegoldenrod;
+  display: block;
+}
+
+.navigation {
+  max-width: 250px;
+  margin: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.for-fun {
+  position: relative;
+  display: flex;
+  width: max-content;
+  margin: auto;
+}
+
+.for-fun::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "";
+  height: 16px;
+  width: 34px;
+  background: linear-gradient(to left, #FFFFFF, rgba(255, 255, 255, 0));
+  transform: translate(0,-50%);
+}
+
+.drag-scroll {
+  display: inline-flex;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.drag-scroll > .scroll-item + .scroll-item {
+  margin-left: 1rem;
+}
+
+/* Hide scrollbar */
+
+.navigation::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Parallex */
+
+.copy {
+  max-width: 230px;
+  background-color: #fff;
+  border: 3px dashed palevioletred;
+  padding: 24px 36px;
+  position: relative;
+  box-shadow: 1px 1px 5px 3px hsl(0, 0%, 0%, 20%);
+}
+
+.parallex-container {
+  min-height: 110vh;
+  background-image: url("images/banana-bg.webp");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-flow: column;
+  place-content: center;
+  align-items: center;
+}
+
+#svg-banana {
+  position: absolute;
+  bottom: -2rem;
+  right: -6rem;
+}
+
+.nothingness {
+  min-height: 100vh;
+}
