@@ -6,8 +6,11 @@ import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 import scrollbooster from 'https://cdn.skypack.dev/scrollbooster';
 
+
+
 gsap.registerPlugin(Draggable, ScrollTrigger);
 
+/* 
 var tl = gsap.timeline();
 tl.fromTo('.info__image',
   {
@@ -63,7 +66,7 @@ button2.onclick = () => {
 };
 
 
-/* Drag */
+// Drag
 const dragElement = document.querySelector('.drag-element');
 const body = document.body;
 Draggable.create(dragElement, {
@@ -80,6 +83,7 @@ new scrollbooster({
   scrollMode: 'native',
   direction: 'horizontal'
 });
+*/
 
 
 var colors = ['#F6B735', '#FA7500'];
@@ -111,6 +115,4 @@ const tP = gsap.timeline({
     }
   }
 });
-tP.to("#svg-banana", { y: -300, duration: 2 })
-tP.to("#svg-banana", { rotate: -300, duration: 4 })
-tP.to("#svg-banana", { y: 100, duration: 3 })
+tP.to("#svg-banana", { y: -300, duration: 8 })
